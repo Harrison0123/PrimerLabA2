@@ -28,13 +28,13 @@ public class Lienzo extends javax.swing.JFrame {
 
         paneldinamico.setLayout(gbl);
 
-        GridBagConstraints grid = new GridBagConstraints();
+        GridBagConstraints ordenar = new GridBagConstraints();
 
-        grid.gridx = 0;
-        grid.gridy = 0;
+        ordenar.gridx = 0;
+        ordenar.gridy = 0;
         
         
-        paneldinamico.add(p1, grid);
+        paneldinamico.add(p1, ordenar);
         
         
         

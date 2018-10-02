@@ -5,6 +5,8 @@
  */
 package Source;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author lmejiaf
@@ -14,8 +16,109 @@ public class Servicio extends javax.swing.JPanel {
     /**
      * Creates new form Servicio
      */
+    String[][] Matriz = {{"y", "ni", "no", "e", "tanto", "así", "igual", "lo", "mas", "pero", "sino", "mientras", "aunque", "aun", "o", "ya", "bien", "porque", "como", "sin"},
+    {"verdad", "derecho", "tú", "da", "don", "problema", "dar", "alguna", "pueblo", "cuando", "mal", "por", "entre", "se", "menos", "modo", "forma", "luego", "yo", "tú"},
+    {"el", "ella", "eso", "aquello", "ellos", "nosotros", "sin", "embargo", "le", "hasta", "somos", "te", "té", "amo", "cuanto", "cuando", "nosotras", "ellas", "la", "es"},
+    {"uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "resultado", "eres", "calidad", "nuevas", "organización", "serie", "necesidad", "comunidad", "central", "figura", "siguiente"},
+    {"investigacion", "aire", "valor", "necesario", "efecto", "capacidad", "gonzáles", "atención", "educación", "resultados", "cerca", "sigue", "posibilidad", "esteban", "nuevos", "hacía", "soy", "pronto", "mes", "futuro"},
+    {"joven", "difícil", "niño", "uso", "bueno", "actividad", "puntos", "llegó", "visto", "movimiento", "etc", "edad", "cara", "existe", "ninguna", "miembros", "grupos", "julio", "interés", "personal"},
+    {"consejo", "datos", "deben", "medida", "imagen", "sector", "paz", "arte", "primeros", "mediante", "media", "alto", "anterior", "cultura", "siendo", "principio", "haya", "servicios", "salud", "estudio"},
+    {"empresas", "población", "actual", "ir", "medios", "espacio", "relaciones", "libertad", "europa", "ambos", "capital", "base", "cero", "dado", "diferentes", "especial", "idea", "barcelona", "demás", "papel"},
+    {"dirección", "fondo", "quién", "0", "camino", "producción", "minutos", "dio", "hablar", "estoy", "ciento", "última", "hijo", "servicio", "antonio", "comisión", "dinero", "tema", "presencia", "niños"},
+    {"ex", "razón", "obra", "saber", "hubiera", "buen", "campo", "vista", "ningún", "música", "tampoco", "interior", "calle", "sabe", "zona", "pesar", "puerta", "policía", "amor", "acción"},
+    {"único", "solo", "fuerza", "méxico", "condiciones", "española", "c", "dio", "s", "tengo", "creo", "total", "últimos", "personas", "político", "igual", "libro", "propia", "ahí", "1"},
+    {"puesto", "empresa", "segunda", "esas", "van", "internacional", "palabras", "programa", "aquella", "quiere", "buena", "español", "orden", "hola", "éste", "iba", "claro", "luz", "mayoría", "mercado"},
+    {"proyecto", "quienes", "mil", "señor", "paso", "voz", "sé", "real", "varios", "semana", "respecto", "tuvo", "algún", "trata", "mal", "hemos", "seguridad", "primero", "cosa", "ministro"},
+    {"propio", "llegar", "falta", "partir", "largo", "familia", "podía", "nivel", "manos", "casos", "cierto", "dicho", "director", "segundo", "2", "equipo", "tierra", "cuanto", "luis", "aquel"},
+    {"cabeza", "3", "junto", "sería", "podría", "unidos", "María", "Harry", "Pipe", "Rocío", "Luis", "David", "Mery", "María", "Juztyn", "4", "5", "6", "7", "8"},
+    {"9", "10", "menos", "según", "país", "gran", "sido", "dijo", "sí", "tres", "ella", "tanto", "día", "siempre", "durante", "tan", "gobierno", "otra", "hace", "eso"},
+    {"esa", "aunque", "otros", "después", "otra", "vida", "cada", "ahora", "ese", "mismo", "tiempo", "bien", "donde", "uno", "él", "tiene", "parte", "ni", "nos", "así"},
+    {"todos", "puede", "vez", "hay", "yo", "han", "sólo", "qué", "porque", "mi", "está", "desde", "desde", "hasta", "años", "muy", "era", "había", "fue", "también"},
+    {"dos", "son", "ser", "esta", "todo", "cuando", "entre", "ya", "este", "sobre", "sin", "si", "me", "ha", "le", "sus", "pero", "o", "más", "como"},
+    {"lo", "alv", "es", "para", "su", "una", "no", "con", "por", "un", "las", "del", "se", "los", "entrelazado", "botella", "lápiz", "alguna", "bestia", "aluminio"}};
+
+    String morse[] = new String[37];
+
+    String letras[] = new String[37];
+
     public Servicio() {
         initComponents();
+        morse[0] = ".-"; 		//a
+        morse[1] = "-...";		//b
+        morse[2] = "-.-.";		//c
+        morse[3] = "-..";		//d
+        morse[4] = ".";		        //e
+        morse[5] = "..-.";		//f
+        morse[6] = "--.";		//g
+        morse[7] = "....";		//h
+        morse[8] = "..";		//i
+        morse[9] = ".---";		//j
+        morse[10] = "-.-";		//k
+        morse[11] = ".-..";	        //l
+        morse[12] = "--";		//m
+        morse[13] = "-.";		//n
+        morse[14] = "--.--";		//ñ
+        morse[14 + 1] = "---";		//o
+        morse[15 + 1] = ".--.";	         //p
+        morse[16 + 1] = "--.-";	        //q
+        morse[17 + 1] = ".-.";      //r
+        morse[18 + 1] = "...";		//s
+        morse[19 + 1] = "-";		//t
+        morse[20 + 1] = "..-";		//u
+        morse[21 + 1] = "...-";	//v
+        morse[22 + 1] = ".--";		//w
+        morse[23 + 1] = "-..-";	//x
+        morse[24 + 1] = "-.--";	//y
+        morse[25 + 1] = "--..";	//z
+        morse[26 + 1] = "-----";	//0
+        morse[27 + 1] = ".----";	//1
+        morse[28 + 1] = "..---";	//2
+        morse[29 + 1] = "...--";	//3
+        morse[30 + 1] = "....-";	//4
+        morse[31 + 1] = ".....";	//5
+        morse[32 + 1] = "-....";	//6
+        morse[33 + 1] = "--...";	//7
+        morse[34 + 1] = "---..";	//8
+        morse[35 + 1] = "----.";	//9
+
+        letras[0] = "a"; 		//a
+        letras[1] = "b";		//b
+        letras[2] = "c";		//c
+        letras[3] = "d";		//d
+        letras[4] = "e";		//e
+        letras[5] = "f";		//f
+        letras[6] = "g";		//g
+        letras[7] = "h";		//h
+        letras[8] = "i";		//i
+        letras[9] = "j";		//j
+        letras[10] = "k";		//k
+        letras[11] = "l";	//l
+        letras[12] = "m";		//m
+        letras[13] = "n";		//n
+        letras[14] = "ñ";		//ñ
+        letras[14 + 1] = "o";		//o
+        letras[15 + 1] = "p";	//p
+        letras[16 + 1] = "q";	//q
+        letras[17 + 1] = "r";      //r
+        letras[18 + 1] = "s";		//s
+        letras[19 + 1] = "t";		//t
+        letras[20 + 1] = "u";		//u
+        letras[21 + 1] = "v";	//v
+        letras[22 + 1] = "w";		//w
+        letras[23 + 1] = "x";	//x
+        letras[24 + 1] = "y";	//y
+        letras[25 + 1] = "z";	//z
+        letras[26 + 1] = "0";	//0
+        letras[27 + 1] = "1";	//1
+        letras[28 + 1] = "2";	//2
+        letras[29 + 1] = "3";	//3
+        letras[30 + 1] = "4";	//4
+        letras[31 + 1] = "5";	//5
+        letras[32 + 1] = "6";	//6
+        letras[33 + 1] = "7";	//7
+        letras[34 + 1] = "8";	//8
+        letras[35 + 1] = "9";	//9
+
     }
 
     /**
@@ -118,13 +221,26 @@ public class Servicio extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        // TODO add your handling code here:
-        
-        
-        
-        
-        
-        
+
+        //validar los campos
+        // todo: 1.ver si viene vacia, 2. validar simbolos, 3. validar tildes
+        //1. si vene vacia
+        String cadena = jTextField1.getText();
+        if (cadena != null) {
+            if (!cadena.isEmpty()) {
+
+                cadena = quitarEspaciosEsquinas(cadena);
+                if (hasSymbol(cadena) == false) {
+                    JOptionPane.showMessageDialog(null, "La cadena contiene simbolos extraños, vuelva a digitarla");
+                    jTextField1.setText("");
+
+                }else{
+                    
+                }
+
+            }
+        }
+
     }//GEN-LAST:event_jLabel5MouseClicked
 
 
@@ -139,4 +255,49 @@ public class Servicio extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
+
+    public String quitarEspaciosEsquinas(String cadena) {
+
+        int inicio = 0;
+        int fin = cadena.length();
+        int i = 0;
+        while ((inicio < fin) && (cadena.substring(i, i + 1).equals(" "))) {
+            inicio++;
+            i++;
+        }
+        i = 0;
+        while ((inicio < fin) && (cadena.substring(fin - 1, fin).equals(" "))) {
+            fin--;
+
+        }
+        cadena = cadena.substring(inicio, fin);
+        return cadena;
+    }
+
+    public boolean hasSymbol(String cadena) {
+        int i = 0, j = 0;
+        boolean valido = true;
+        while (i < cadena.length()) {
+            boolean valido2 = false;
+            while (j < letras.length && valido2 == false) {
+
+                if (letras[j].equals(cadena.substring(i, i + 1))) {
+                    valido2 = true;
+                }
+
+                j++;
+            }
+            if (valido2 == false) {
+
+                return false;
+            } else {
+                valido = true;
+            }
+
+            i++;
+        }
+
+        return valido;
+    }
+
 }
